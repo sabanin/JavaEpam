@@ -16,6 +16,8 @@ public class Project2 {
     public static void main(String[] args) {
         Reader reader= new Reader();
         Text text = new Text(reader.read("text.txt"));
+        text.reverseWordsInText();
+        System.out.println(text.toString());
         // TODO code application logic here
     }
 }

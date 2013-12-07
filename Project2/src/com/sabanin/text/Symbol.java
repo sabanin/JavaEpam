@@ -9,5 +9,14 @@ package com.sabanin.text;
  * @author Евгений
  */
 public class Symbol {
-    protected char symbol;
+    protected Character symbol;
+    
+    Symbol (char symbol){
+        this.symbol = symbol;
+    }
+    
+    @Override
+    public String toString(){
+        return symbol.toString();
+    }
 }

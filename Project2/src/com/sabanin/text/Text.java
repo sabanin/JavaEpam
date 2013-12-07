@@ -5,28 +5,50 @@
 package com.sabanin.text;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Евгений
  */
 public class Text {
-    protected ArrayList<Sentence> sentences; 
+    protected List<Sentence> sentences; 
     
     public Text(String allText){
-        makeSentencesFromText(allText);
+        sentences = new ArrayList<Sentence>();
+        parceText(allText);
     }
     
-    protected void makeSentencesFromText(String text){
+    protected void parceText(String text){
         int pointer = 0;
         while(pointer < text.length()){
             String sentence = new String();
-            while (text.charAt(pointer) != '.' || text.charAt(pointer) != '!' || text.charAt(pointer) != '?'){
+            while (pointer < text.length() && !(text.charAt(pointer) == '.' ||text.charAt(pointer) == '!' ||text.charAt(pointer) == '?')){
                 sentence += text.charAt(pointer);
                 pointer++;
             }
-            sentence += text.charAt(pointer);
-            sentences.add(new Sentence(sentence));
+            if (pointer < text.length()){
+                sentence += text.charAt(pointer);
+            }
+            if (!sentence.isEmpty()){
+                sentences.add(new Sentence(sentence));
+            }
+            pointer++;
         }
+    }
+    
+    public void reverseWordsInText(){
+        for (Sentence sent : sentences){
+           sent.reverseFirstAndLast();
+        }
+    }
+    
+    @Override
+    public String toString(){
+        StringBuffer result = new StringBuffer();
+        for (Sentence sent : sentences){
+            result.append(sent.toString());
+        }
+        return result.toString();
     }
 }
