@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Bank xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="bank.xsd">
+<BankDeposit depositId="13">
+	<Name>Первый Банк</Name> 
+	<Country>Украина</Country>
+	<Type>Накопительный</Type>
+	<Depositor>Ростик Вишневский</Depositor>
+	<AccountId>1516</AccountId>
+	<AmountOnDeposit>7879</AmountOnDeposit>
+	<Profitability>11%</Profitability>
+	<Date>15-08-2003</Date>
+</BankDeposit>
+<BankDeposit depositId="42">
+	<Name>Второй, но все равно хороший Банк</Name> 
+	<Country>Украина</Country>
+	<Type>Срочный</Type>
+	<Depositor>Зак Браф</Depositor>
+	<AccountId>6589</AccountId>
+	<AmountOnDeposit>464878</AmountOnDeposit>
+	<Profitability>9%</Profitability>
+	<Date>29-12-2005</Date>
+</BankDeposit>
+<BankDeposit depositId="66">
+	<Name>Хороший Банк</Name> 
+	<Country>Швейцария</Country>
+	<Type>Металлический</Type>
+	<Depositor>Вдовиченко Оксана</Depositor>
+	<AccountId>1314</AccountId>
+	<AmountOnDeposit>101</AmountOnDeposit>
+	<Profitability>33%</Profitability>
+	<Date>10-12-2013</Date>
+</BankDeposit>
+</Bank>
